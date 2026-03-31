@@ -1,0 +1,57 @@
+sleep-echo-split/
+├─ public/
+│  └─ （预留静态资源目录；当前版本暂未放本地图标和图片）
+├─ src/
+│  ├─ app/
+│  │  └─ App.jsx                         # 应用总入口：管理 startup/login/binding/main 四段路由状态
+│  ├─ pages/
+│  │  ├─ StartupPage.jsx                 # 启动页
+│  │  ├─ MainApp.jsx                     # 主应用骨架：底部导航 + 子视图切换
+│  │  ├─ auth/
+│  │  │  ├─ LoginPage.jsx                # 登录/注册页
+│  │  │  └─ BindingPage.jsx              # 首次绑定设备页
+│  │  ├─ tabs/
+│  │  │  ├─ HomeTab.jsx                  # 首页 Tab
+│  │  │  ├─ ReportCenterTab.jsx          # 报告中心 Tab
+│  │  │  ├─ LightTab.jsx                 # 灯光联动 Tab
+│  │  │  ├─ RecordCenterTab.jsx          # 记录中心 Tab
+│  │  │  └─ ProfileTab.jsx               # 我的 Tab
+│  │  └─ subviews/
+│  │     ├─ StageDetailView.jsx          # 阶段特征预警详情页
+│  │     ├─ DeviceSettingsView.jsx       # 设备与自动化设置页
+│  │     ├─ MonitoringPrepView.jsx       # 今晚监测准备页
+│  │     └─ ProfessionalReportView.jsx   # 专业可解释报告独立页
+│  ├─ components/
+│  │  ├─ navigation/
+│  │  │  └─ NavItem.jsx                  # 底部导航单项
+│  │  ├─ report/
+│  │  │  ├─ LegendItem.jsx               # 报告图例小项
+│  │  │  ├─ MetricsPanel.jsx             # 指标统计面板
+│  │  │  ├─ LegendRow.jsx                # 指标面板中的图例行
+│  │  │  ├─ MetricRow.jsx                # 指标面板中的指标行
+│  │  │  ├─ InterpretationCard.jsx       # 睡眠解读卡片
+│  │  │  └─ ProfessionalReportSection.jsx# 报告页中的专业报告模块
+│  │  ├─ stage-detail/
+│  │  │  └─ ModernRadarChart.jsx         # 阶段特征详情页使用的雷达图
+│  │  └─ professional-report/
+│  │     ├─ BlockyHypnogram.jsx          # 专业报告中的块状分期趋势图
+│  │     ├─ UnifiedMetric.jsx            # 专业报告中的统一指标块
+│  │     ├─ MicroMetric.jsx              # 专业报告中的迷你指标块
+│  │     └─ ModernSleepStageDonut.jsx    # 专业报告中的睡眠结构环图
+│  ├─ charts/
+│  │  ├─ DayHypnogramChart.jsx           # 日视图睡眠分期图
+│  │  ├─ WeekBarChart.jsx                # 周视图柱状图
+│  │  └─ MonthBarChart.jsx               # 月视图柱状图
+│  ├─ styles/
+│  │  └─ utilities.css                   # 预留样式工具文件
+│  ├─ main.jsx                           # React 挂载入口
+│  └─ index.css                          # Tailwind 入口 + 全局样式
+├─ .github/
+│  └─ workflows/
+│     └─ deploy.yml                      # GitHub Pages 自动部署工作流
+├─ index.html                            # Vite HTML 模板
+├─ package.json                          # 项目依赖与脚本
+├─ vite.config.js                        # Vite 配置（base 为 ./）
+├─ tailwind.config.js                    # Tailwind 配置
+├─ postcss.config.js                     # PostCSS 配置
+└─ README.md                             # 项目说明
